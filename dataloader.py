@@ -16,6 +16,9 @@ class ProteinDataset(torch.utils.data.Dataset):
 
 		data = data[~data['seq'].isna()]
 		if tokenizer is not None:
+			if data['seq'].str.len().max() > config['max_seq_len']:
+				print(f"Some sequences are longer than {config['max_seq_len']}. They will be truncated. "
+					  f"If this is not intended, please adjust the `max_seq_len` in the config.")
 			seq_data = tokenizer(data['seq'].to_list(), padding=True,
 								 truncation=True, add_special_tokens=True, max_length=config['max_seq_len'])
 			data['seq_data'] = seq_data['input_ids']
