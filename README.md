@@ -29,4 +29,4 @@ The data is expected to be in a pickled pandas DataFrame with the sequence in a 
 
 ## Reproduce results from manuscript
 Please find the corresponding notebooks and scripts in `/manuscript`. To download the saved model checkpoints and alanine scan results, please download those here: 
-https://1drv.ms/f/s!AhK2hrQjl9NtlIgf9ueMG5xV94JBUA?e=k1kHZF
+https://doi.org/10.5281/zenodo.16793684
